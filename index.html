@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos Esenciales -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Icono del Sitio (Favicon) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3E%E2%99%A3%EF%B8%8F%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <!-- SEO y Metadatos para Redes Sociales (Open Graph) -->
+  <title>Entrenamiento de Póker Personalizado | METAPOKER - Planes Adaptativos</title>
+  <meta name="description" content="Entrenamiento personalizado de póker para micro-límites. 1.5h semanales + asistencia constante. Planes adaptativos para NL2, NL5, NL10, NL25, NL50, NL100+" />
+  <meta name="keywords" content="entrenamiento poker, coaching poker, micro limites, NL2, NL5, NL10, NL25, NL50, NL100, mejorar poker, estrategias poker, poker online" />
+  <meta name="author" content="METAPOKER" />
+  <meta property="og:title" content="Entrenamiento de Póker Personalizado | METAPOKER" />
+  <meta property="og:description" content="Desarrollo integral para jugadores de póker. Planes adaptativos para todos los niveles." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fuentes Externas y Hojas de Estilo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos CSS Integrados -->
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --text-primary: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent-blue: #58a6ff;
+      --accent-purple: #7c3aed;
+      --accent-pink: #ec4899;
+      --accent-gold: #fbbf24;
+      --border-color: #30363d;
+      --glow-blue: rgba(88, 166, 255, 0.5);
+      --glow-purple: rgba(124, 58, 237, 0.5);
+      --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color-scheme: dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 20px 50px rgba(88, 166, 255, 0.5);
+      font-size: 1.1rem;
+      transition: var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(88, 166, 255, 0.7);
+    }
+
+    .section {
+      padding: 6rem 0;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glass-card {
+      background: rgba(13, 17, 23, 0.7);
+      border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: var(--transition-fast);
+      will-change: transform;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--accent-blue);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(135deg, #a5cffc 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-description {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      line-height: 1.7;
+    }
+
+    .value-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .value-icon i {
+      font-size: 3.5rem;
+      filter: drop-shadow(0 0 8px currentColor);
+    }
+
+    .value-card h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .value-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+      align-items: center;
+    }
+
+    .pricing-card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: var(--transition-fast);
+      overflow: hidden;
+    }
+
+    .pricing-card.featured {
+      transform: scale(1.05);
+      border: 2px solid var(--accent-blue);
+    }
+
+    .pricing-header h3 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pricing-features li .fa-check {
+      color: #22c55e;
+      font-size: 1rem;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--accent-blue);
+      color: var(--accent-blue);
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-blue);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: rgba(13, 17, 23, 0.9);
+      border-top: 1px solid var(--border-color);
+      padding: 4rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .brand-name {
+        font-size: 4rem;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="section-title">METAPOKER</h1>
+        <h2>Redefine tu Juego</h2>
+        <p>La herramienta que conecta lo que sabes con lo que haces.</p>
+        <a href="#agenda" class="btn-primary">Crear Mi Plan Personalizado</a>
+      </div>
+    </section>
+
+    <section class="section glass">
+      <div class="container">
+        <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+        <div class="value-cards">
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-heart" style="color:#e11d48;"></i></div>
+            <h3>El Porqué</h3>
+            <p>Un propósito más allá del dinero que te motive a ser un profesional.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-bullseye" style="color:#f59e0b;"></i></div>
+            <h3>El Qué</h3>
+            <p>La estrategia correcta, sustentada por tecnologías de vanguardia.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-bolt" style="color:#22d3ee;"></i></div>
+            <h3>El Cómo</h3>
+            <p>La ejecución consistente y la aplicación de esa estrategia en el juego real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="section glass">
+      <div class="container">
+        <h2 class="section-title">¿Quieres desarrollar tu juego de forma integral?</h2>
+        <p class="section-description">Reserva tu sesión estratégica gratuita y descubre cómo podemos ayudarte a crear un plan personalizado.</p>
+        <a href="https://wa.me/584269204485?text=Hola,%20quiero%20agendar%20mi%20sesión%20estrategica%20gratuita" class="btn-primary" target="_blank">Agendar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 METAPOKER. Todos los derechos reservados.</p>
+    <p>Juego responsable | +18 años</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.section').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+
+</html>
