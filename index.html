@@ -1,327 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <!-- Metadatos Esenciales -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Icono del Sitio (Favicon) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3E%E2%99%A3%EF%B8%8F%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
-
-  <!-- SEO y Metadatos para Redes Sociales (Open Graph) -->
-  <title>Entrenamiento de Póker Personalizado | METAPOKER - Planes Adaptativos</title>
-  <meta name="description" content="Entrenamiento personalizado de póker para micro-límites. 1.5h semanales + asistencia constante. Planes adaptativos para NL2, NL5, NL10, NL25, NL50, NL100+" />
-  <meta name="keywords" content="entrenamiento poker, coaching poker, micro limites, NL2, NL5, NL10, NL25, NL50, NL100, mejorar poker, estrategias poker, poker online" />
-  <meta name="author" content="METAPOKER" />
-  <meta property="og:title" content="Entrenamiento de Póker Personalizado | METAPOKER" />
-  <meta property="og:description" content="Desarrollo integral para jugadores de póker. Planes adaptativos para todos los niveles." />
-  <meta property="og:type" content="website" />
-
-  <!-- Fuentes Externas y Hojas de Estilo -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3Eâ™£ï¸%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO Mejorado -->
+  <title>Entrenamiento de PÃ³ker Personalizado | METAPOKER - Planes Adaptativos</title>
+  <meta name="description" content="Entrenamiento personalizado de pÃ³ker para micro-lÃ­mites. 1.5h semanales + asistencia constante. Planes adaptativos para NL2, NL5, NL10, NL25, NL50, NL100+">
+  <meta name="keywords" content="entrenamiento poker, coaching poker, micro limites, NL2, NL5, NL10, NL25, NL50, NL100, mejorar poker, estrategias poker, poker online">
+  <meta name="author" content="METAPOKER">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Entrenamiento de PÃ³ker Personalizado | METAPOKER">
+  <meta property="og:description" content="Desarrollo integral para jugadores de pÃ³ker. Planes adaptativos para todos los niveles.">
+  <meta property="og:type" content="website">
+  
+  <!-- Fuentes y estilos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Estilos CSS Integrados -->
-  <style>
-    :root {
-      --bg-primary: #0d1117;
-      --bg-secondary: #161b22;
-      --text-primary: #c9d1d9;
-      --text-secondary: #8b949e;
-      --accent-blue: #58a6ff;
-      --accent-purple: #7c3aed;
-      --accent-pink: #ec4899;
-      --accent-gold: #fbbf24;
-      --border-color: #30363d;
-      --glow-blue: rgba(88, 166, 255, 0.5);
-      --glow-purple: rgba(124, 58, 237, 0.5);
-      --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      color-scheme: dark;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-      color: white;
-      padding: 1.2rem 2.5rem;
-      border: none;
-      border-radius: 9999px;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0 20px 50px rgba(88, 166, 255, 0.5);
-      font-size: 1.1rem;
-      transition: var(--transition-fast);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 25px 60px rgba(88, 166, 255, 0.7);
-    }
-
-    .section {
-      padding: 6rem 0;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .glass-card {
-      background: rgba(13, 17, 23, 0.7);
-      border-radius: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transition: var(--transition-fast);
-      will-change: transform;
-    }
-
-    .glass-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      border-color: var(--accent-blue);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      text-align: center;
-      background: linear-gradient(135deg, #a5cffc 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-description {
-      text-align: center;
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      margin: 0 auto 4rem;
-      line-height: 1.7;
-    }
-
-    .value-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-      margin-top: 4rem;
-    }
-
-    .value-card {
-      text-align: center;
-      padding: 3rem;
-    }
-
-    .value-icon i {
-      font-size: 3.5rem;
-      filter: drop-shadow(0 0 8px currentColor);
-    }
-
-    .value-card h3 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .value-card p {
-      color: var(--text-secondary);
-      line-height: 1.7;
-      font-size: 1.1rem;
-    }
-
-    .pricing-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
-      align-items: center;
-    }
-
-    .pricing-card {
-      text-align: center;
-      padding: 2.5rem 2rem;
-      position: relative;
-      transition: var(--transition-fast);
-      overflow: hidden;
-    }
-
-    .pricing-card.featured {
-      transform: scale(1.05);
-      border: 2px solid var(--accent-blue);
-    }
-
-    .pricing-header h3 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .pricing-features {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0;
-      text-align: left;
-    }
-
-    .pricing-features li {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .pricing-features li .fa-check {
-      color: #22c55e;
-      font-size: 1rem;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid var(--accent-blue);
-      color: var(--accent-blue);
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      transition: var(--transition-fast);
-    }
-
-    .btn-secondary:hover {
-      background: var(--accent-blue);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      background: rgba(13, 17, 23, 0.9);
-      border-top: 1px solid var(--border-color);
-      padding: 4rem 0;
-      text-align: center;
-      color: var(--text-secondary);
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        padding: 4rem 0;
-      }
-
-      .brand-name {
-        font-size: 4rem;
-      }
-
-      .pricing-card.featured {
-        transform: scale(1);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="section-title">METAPOKER</h1>
-        <h2>Redefine tu Juego</h2>
-        <p>La herramienta que conecta lo que sabes con lo que haces.</p>
-        <a href="#agenda" class="btn-primary">Crear Mi Plan Personalizado</a>
-      </div>
-    </section>
+<div class="aurora-background" aria-hidden="true">
+  <div class="aurora-shape aurora-shape1"></div>
+  <div class="aurora-shape aurora-shape2"></div>
+</div>
 
-    <section class="section glass">
-      <div class="container">
-        <h2 class="section-title">Nuestra Propuesta de Valor</h2>
-        <div class="value-cards">
-          <div class="value-card glass-card">
-            <div class="value-icon"><i class="fas fa-heart" style="color:#e11d48;"></i></div>
-            <h3>El Porqué</h3>
-            <p>Un propósito más allá del dinero que te motive a ser un profesional.</p>
-          </div>
-          <div class="value-card glass-card">
-            <div class="value-icon"><i class="fas fa-bullseye" style="color:#f59e0b;"></i></div>
-            <h3>El Qué</h3>
-            <p>La estrategia correcta, sustentada por tecnologías de vanguardia.</p>
-          </div>
-          <div class="value-card glass-card">
-            <div class="value-icon"><i class="fas fa-bolt" style="color:#22d3ee;"></i></div>
-            <h3>El Cómo</h3>
-            <p>La ejecución consistente y la aplicación de esa estrategia en el juego real.</p>
+<!-- HERO ORIGINAL -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="logo-float synchronized">
+      <div class="trebol-logo"><span class="trebol-icon" aria-hidden="true"><i class="fa-solid fa-clover"></i><i class="fa-solid fa-gear"></i></span></div>
+      <h1 class="brand-name">METAPOKER</h1>
+    </div>
+    <h2 class="hero-subtitle">Redefine tu Juego</h2>
+    <p class="hero-description">La herramienta que conecta lo que sabes con lo que haces</p>
+    <a href="#agenda" class="btn-primary">Crear Mi Plan Personalizado</a>
+  </div>
+</section>
+
+<!-- PROPUESTA DE VALOR ORIGINAL -->
+<section class="section glass">
+  <div class="container">
+    <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+    <div class="value-cards">
+      <div class="value-card glass-card">
+        <div class="value-icon">
+          <i class="fas fa-heart" style="font-size:3.5rem;color:#e11d48;filter:drop-shadow(0 0 8px #e11d48);"></i>
+        </div>
+        <h3>El PorquÃ©</h3>
+        <p>Un propÃ³sito mÃ¡s allÃ¡ del dinero que te motive a ser un profesional.</p>
+      </div>
+      <div class="value-card glass-card">
+        <div class="value-icon">
+          <i class="fas fa-bullseye" style="font-size:3.5rem;color:#f59e0b;filter:drop-shadow(0 0 8px #f59e0b);"></i>
+        </div>
+        <h3>El QuÃ©</h3>
+        <p>La estrategia correcta, sustentada por tecnologÃ­as de vanguardia.</p>
+      </div>
+      <div class="value-card glass-card">
+        <div class="value-icon">
+          <i class="fas fa-bolt" style="font-size:3.5rem;color:#22d3ee;filter:drop-shadow(0 0 8px #22d3ee);"></i>
+        </div>
+        <h3>El CÃ³mo</h3>
+        <p>La ejecuciÃ³n consistente y la aplicaciÃ³n de esa estrategia en el juego real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBSERVACIÃ“N PROFESIONAL ORIGINAL -->
+<section class="section glass critique-section">
+  <div class="container">
+    <h2 class="section-title">Nuestra ObservaciÃ³n Profesional</h2>
+    <div class="critique-content glass-card">
+      <div class="critique-icons"><i class="fas fa-exclamation-triangle critique-icon"></i><i class="fas fa-balance-scale critique-icon"></i><i class="fas fa-chart-line critique-icon"></i></div>
+      <p class="critique-text"><i class="fas fa-quote-left"></i> La comunidad de pÃ³ker se centra excesivamente en el <strong>QuÃ©</strong>: la acumulaciÃ³n de estrategias y conocimiento. Este desequilibrio crea jugadores con informaciÃ³n abundante pero sin un <strong>PorquÃ©</strong> suficientemente fortalecido y un <strong>CÃ³mo</strong> prÃ¡cticamente desolado sin apoyo real.</p>
+      <p class="critique-text"><i class="fas fa-search"></i> Esta brecha genera inconsistencia, frustraciÃ³n y estancamiento. Los jugadores buscan mÃ¡s informaciÃ³n para resolver problemas que en realidad requieren desarrollo integral: tÃ©cnica, mentalidad y gestiÃ³n del proceso.</p>
+      <p class="critique-text"><i class="fas fa-lightbulb"></i> En METAPOKER buscamos el equilibrio. No solo te damos el QuÃ©, te ayudamos a construir el CÃ³mo y conectamos con tu PorquÃ©, para que realmente puedas desarrollar una inercia positiva en tu camino de profesionalizaciÃ³n.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMA ORIGINAL -->
+<section class="section glass service-detail">
+  <div class="container">
+    <h2 class="section-title">Nuestro Sistema: El Ritmo de la Consistencia</h2>
+    <p class="section-description">Transformamos la complejidad del pÃ³ker en un sistema visual y dinÃ¡mico, centrado en tu progreso sostenible.</p>
+    <div class="service-steps">
+      <div class="service-step visual-step">
+        <div class="step-visual"><div class="step-icon"><i class="fas fa-search" style="font-size: 5rem; color: #58a6ff;"></i></div><div class="step-number">1</div></div>
+        <div class="step-content"><h3>Identificamos tus habilidades</h3><p>El pÃ³ker no es una sola habilidad, sino un conjunto de sub-habilidades. Nuestro enfoque es holÃ­stico y personalizado.</p></div>
+      </div>
+      <div class="service-step visual-step">
+        <div class="step-visual"><div class="step-icon"><i class="fas fa-bolt" style="font-size: 5rem; color: #58a6ff;"></i></div><div class="step-number">2</div></div>
+        <div class="step-content"><h3>Nos centramos en la ejecuciÃ³n</h3><p>Tu progreso se basa en la acciÃ³n estratÃ©gica y consistente. Un solo paso, enfocado y repetible.</p></div>
+      </div>
+      <div class="service-step visual-step">
+        <div class="step-visual"><div class="step-icon"><i class="fas fa-users" style="font-size: 5rem; color: #58a6ff;"></i></div><div class="step-number">3</div></div>
+        <div class="step-content"><h3>Somos tu equipo</h3><p>Rompemos con la soledad de la prÃ¡ctica. Te ofrecemos el valor sinÃ©rgico de un equipo que te asiste y complementa.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÃ“N DE PLANES NUEVA (MEJORADA) -->
+<section id="planes" class="section glass pricing-section">
+  <div class="container">
+    <h2 class="section-title">Planes de Entrenamiento Adaptativos</h2>
+    <p class="section-description">Cada jugador es Ãºnico. Nuestros planes se adaptan a tu nivel, modalidad y objetivos especÃ­ficos.</p>
+    
+    <div class="pricing-cards">
+      <!-- Plan MicroLÃ­mites -->
+      <div class="pricing-card glass-card">
+        <div class="plan-badge" for="micro">Ideal para comenzar</div>
+        <div class="pricing-header">
+          <h3>MicroLÃ­mites</h3>
+          <div class="plan-focus">NL2 â€¢ NL5 â€¢ NL10</div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> SesiÃ³n semanal personalizada (1.5h)</li>
+          <li><i class="fas fa-check"></i> Asistencia durante toda la semana</li>
+          <li><i class="fas fa-check"></i> GestiÃ³n de tareas y seguimiento</li>
+          <li><i class="fas fa-check"></i> Soporte tÃ©cnico y mental</li>
+          <li><i class="fas fa-check"></i> Respuesta a consultas</li>
+          <li><i class="fas fa-check"></i> Todas las modalidades (Cash, MTT, Sit&Go)</li>
+        </ul>
+        <div class="plan-condition">
+          <p><i class="fas fa-calendar-alt"></i> <strong>MembresÃ­a mensual</strong></p>
+          <p><i class="fas fa-handshake"></i> Condiciones en la primera sesiÃ³n</p>
+        </div>
+        <button class="btn-primary" onclick="document.getElementById('agenda').scrollIntoView({behavior: 'smooth'})">Agendar EvaluaciÃ³n</button>
+      </div>
+
+      <!-- Plan Niveles Medios -->
+      <div class="pricing-card glass-card featured">
+        <div class="plan-badge" for="recommended">Recomendado</div>
+        <div class="pricing-header">
+          <h3>Niveles Intermedios</h3>
+          <div class="plan-focus">NL25 â€¢ NL50 â€¢ NL100</div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> SesiÃ³n semanal intensiva (1.5h)</li>
+          <li><i class="fas fa-check"></i> 4 dÃ­as de asistencia activa</li>
+          <li><i class="fas fa-check"></i> AnÃ¡lisis detallado de manos</li>
+          <li><i class="fas fa-check"></i> GestiÃ³n integral del progreso</li>
+          <li><i class="fas fa-check"></i> Soporte prioritario</li>
+          <li><i class="fas fa-check"></i> Todas las modalidades</li>
+        </ul>
+        <div class="plan-condition">
+          <p><i class="fas fa-calendar-alt"></i> <strong>MembresÃ­a mensual</strong></p>
+          <p><i class="fas fa-handshake"></i> Condiciones en la primera sesiÃ³n</p>
+        </div>
+        <button class="btn-primary" onclick="document.getElementById('agenda').scrollIntoView({behavior: 'smooth'})">Agendar EvaluaciÃ³n</button>
+      </div>
+
+      <!-- Plan Personalizado -->
+      <div class="pricing-card glass-card">
+        <div class="plan-badge" for="elite">Elite</div>
+        <div class="pricing-header">
+          <h3>Desarrollo Especializado</h3>
+          <div class="plan-focus">NL100+ â€¢ Proyectos especÃ­ficos</div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Habilidades especÃ­ficas a desarrollar</li>
+          <li><i class="fas fa-check"></i> Enfoque tÃ©cnico o mental personalizado</li>
+          <li><i class="fas fa-check"></i> TÃ©cnicas de estudio adaptadas</li>
+          <li><i class="fas fa-check"></i> DuraciÃ³n flexible por proyecto</li>
+          <li><i class="fas fa-check"></i> Trabajo orientado a objetivos</li>
+          <li><i class="fas fa-check"></i> Todas las modalidades</li>
+        </ul>
+        <div class="plan-condition">
+          <p><i class="fas fa-calendar-alt"></i> <strong>Por proyecto o mensual</strong></p>
+          <p><i class="fas fa-handshake"></i> EvaluaciÃ³n personalizada</p>
+        </div>
+        <button class="btn-secondary" onclick="document.getElementById('agenda').scrollIntoView({behavior: 'smooth'})">Solicitar InformaciÃ³n</button>
+      </div>
+    </div>
+
+    <div class="pricing-note">
+      <p><i class="fas fa-info-circle"></i> <strong>Importante:</strong> Los valores se ajustan segÃºn tu situaciÃ³n especÃ­fica. Lo conversamos en tu sesiÃ³n de evaluaciÃ³n gratuita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS ORIGINALES -->
+<section class="section glass testimonials">
+  <div class="container">
+    <h2 class="section-title">Lo Que Nuestros Clientes Dicen</h2>
+    <div class="carousel-container">
+      <div class="carousel-inner" id="testimonials-carousel">
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"En febrero, jugaba NL2 y ahora estoy a solo unos pasos de subir a NL25... Sin duda, los recomiendo con los ojos cerrados a cualquier persona que quiera dedicarse profesionalmente al pÃ³ker."</p><footer class="testimonial-footer"><div class="testimonial-avatar">FZ</div><div><div class="testimonial-name">FabiÃ¡n Zugaide</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"El como persona, es super paciente, positivo, educado, capaz y es muy bueno leyendo a la persona... doy mi palabra, de que es alguien super comprometido y exageradamente competente en muchas Ã¡reas."</p><footer class="testimonial-footer"><div class="testimonial-avatar">AE</div><div><div class="testimonial-name">Alex Etxaburu</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"El cambio que he experimentado... ha sido sobretodo la realizaciÃ³n de resÃºmenes inteligentes que te van a facilitar la toma de decisiones. Antes pasaba horas viendo vÃ­deos como si fuera 'Netflix', lo cual era ineficaz."</p><footer class="testimonial-footer"><div class="testimonial-avatar">JR</div><div><div class="testimonial-name">Juan A. Ruiz</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"La experiencia con Meta Poker ha sido bastante enriquecedora... transmiten el entendimiento del pÃ³ker de una manera integral..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">Y</div><div><div class="testimonial-name">Yeison</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"Excelente mÃ©todo de enseÃ±anza que no se encuentra en ningÃºn lado de habla hispana, todo estÃ¡ estructurado en funciÃ³n de las necesidades y tiempo del jugador hay un seguimiento constante..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">LH</div><div><div class="testimonial-name">Leonardo Hernandez</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"...la atenciÃ³n no hay duda que es reconocible el interÃ©s de ayudar sin importar la hora y el dÃ­a, te va a llevar de la mano y tendrÃ¡s una persona con un valor humanitario demasiado grande..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">JV</div><div><div class="testimonial-name">JosÃ© Valerio</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+        <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">â˜…â˜…â˜…â˜…â˜…</div><p class="testimonial-text">"Muy buen mÃ©todo y se preocupa como hacerte el camino mÃ¡s fÃ¡cil y explican porque se hacen, 100% recomendable. AtenciÃ³n personalizada prÃ¡cticamente diariamente."</p><footer class="testimonial-footer"><div class="testimonial-avatar">V</div><div><div class="testimonial-name">Vanfull007</div><div class="testimonial-level">Estudiante destacado</div></div></footer></blockquote></div>
+      </div>
+      <button class="carousel-button prev" onclick="moveCarousel(-1)" aria-label="Anterior"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg></button>
+      <button class="carousel-button next" onclick="moveCarousel(1)" aria-label="Siguiente"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="carousel-indicators"><button class="indicator active" onclick="goToSlide(0)"></button><button class="indicator" onclick="goToSlide(1)"></button><button class="indicator" onclick="goToSlide(2)"></button><button class="indicator" onclick="goToSlide(3)"></button><button class="indicator" onclick="goToSlide(4)"></button><button class="indicator" onclick="goToSlide(5)"></button><button class="indicator" onclick="goToSlide(6)"></button></div>
+  </div>
+</section>
+
+<!-- FACILITADOR ORIGINAL -->
+<section class="section glass facilitator-section">
+  <div class="container">
+    <h2 class="section-title">Conoce a nuestro Facilitador</h2>
+    <div class="facilitator-single">
+      <div class="facilitator-content-full">
+        <div class="facilitator-icon-top">
+          <i class="fa-solid fa-chalkboard-user"></i>
+        </div>
+        <div class="facilitator-name-group">
+        <div class="facilitator-icon-only" style="text-align:center;margin-bottom:1.5rem;">
+          <i class="fas fa-user-graduate" style="font-size:5rem;color:#58a6ff;filter:drop-shadow(0 0 10px #58a6ff);"></i>
+        </div>
+          <h3 class="facilitator-name">Miguel SÃ¡enz</h3>
+          <div class="facilitator-badge-inline">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812c-.643.051-1.254.304-1.745.723a3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
           </div>
         </div>
+        <div class="facilitador-role">Facilitador de METAPOKER</div>
+        <p class="facilitator-description">
+          En METAPOKER, somos un sistema que estÃ¡ encarnado por una visiÃ³n y experiencia. Miguel SÃ¡enz es el facilitador que te guiarÃ¡ en este proceso.
+        </p>
+        <ul class="facilitator-credentials">
+          <li class="credential-item"><span class="credential-icon">â—†</span><span>MÃ¡s de <strong>5 aÃ±os de experiencia</strong> en el pÃ³ker profesional.</span></li>
+          <li class="credential-item"><span class="credential-icon">â—†</span><span>Experiencia previa como <strong>atleta profesional en ajedrez</strong>.</span></li>
+          <li class="credential-item"><span class="credential-icon">â—†</span><span>FormaciÃ³n en <strong>AdministraciÃ³n de Empresas</strong> y estudios realizados en Desarrollo Humano, Neurociencia, y PsicologÃ­a del Aprendizaje.</span></li>
+          <li class="credential-item"><span class="credential-icon">â—†</span><span>Cofundador de un sistema que integra <strong>neurociencia y psicologÃ­a del aprendizaje</strong> para el desarrollo de la maestrÃ­a.</span></li>
+        </ul>
+        <div class="facilitator-cta">
+          <button class="btn-secondary" onclick="document.getElementById('agenda').scrollIntoView({behavior: 'smooth'})">Conocer mÃ¡s sobre Miguel</button>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="agenda" class="section glass">
-      <div class="container">
-        <h2 class="section-title">¿Quieres desarrollar tu juego de forma integral?</h2>
-        <p class="section-description">Reserva tu sesión estratégica gratuita y descubre cómo podemos ayudarte a crear un plan personalizado.</p>
-        <a href="https://wa.me/584269204485?text=Hola,%20quiero%20agendar%20mi%20sesión%20estrategica%20gratuita" class="btn-primary" target="_blank">Agendar por WhatsApp</a>
+<!-- CTA FINAL ORIGINAL -->
+<section id="agenda" class="section cta-section">
+  <div class="container">
+    <h2 class="section-title">Â¿Quieres desarrollar tu juego de forma integral?</h2>
+    <p class="section-description">Reserva tu sesiÃ³n estratÃ©gica gratuita y descubre cÃ³mo podemos ayudarte a crear un plan personalizado que se ajuste a tus necesidades.</p>
+    <form id="schedule-form" class="contact-form glass-card">
+      <div class="form-row">
+        <div class="form-group"><label for="name">Tu Nombre *</label><input type="text" id="name" name="name" autocomplete="name" required placeholder="Ej: Juan PÃ©rez"></div>
+        <div class="form-group"><label for="country">PaÃ­s *</label><input type="text" id="country" name="country" autocomplete="country" required placeholder="Ej: MÃ©xico"></div>
       </div>
-    </section>
-  </main>
+      <div class="form-group"><label for="datetime">Fecha y Hora Preferida *</label><input type="datetime-local" id="datetime" name="datetime" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"></div>
+      <div class="form-group"><label for="purpose">CuÃ©ntanos brevemente sobre tu situaciÃ³n actual *</label><textarea id="purpose" name="purpose" rows="4" maxlength="500" placeholder="Ej: Me gustarÃ­a mejorar mi consistencia y tomar mejores decisiones en el juego..." required></textarea><small id="purpose-help" class="form-help">í²¡ Esto nos ayudarÃ¡ a crear un plan que se ajuste perfectamente a tus necesidades</small></div>
+      <button type="submit" class="btn-primary btn-large">Crear Mi Plan Personalizado</button>
+    </form>
+    <div class="cta-benefits"><p class="benefits-title">En tu sesiÃ³n descubrirÃ¡s:</p><ul class="benefits-list"><li>âœ… CÃ³mo crear un plan de desarrollo personalizado</li><li>âœ… Las Ã¡reas clave que necesitas fortalecer</li><li>âœ… La metodologÃ­a que utilizamos para acompaÃ±arte</li></ul><p class="benefits-note">í³… Espacios limitados cada semana</p></div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2024 METAPOKER. Todos los derechos reservados.</p>
-    <p>Juego responsable | +18 años</p>
-  </footer>
+<footer class="footer"><div class="container"><p>&copy; 2020 METAPOKER. Todos los derechos reservados.</p><p class="footer-note">Juego responsable | +18 aÃ±os</p></div></footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.section').forEach(el => observer.observe(el));
-    });
-  </script>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
