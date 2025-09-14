@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos Esenciales -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Icono del Sitio (Favicon) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3E%E2%99%A3%EF%B8%8F%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <!-- SEO y Metadatos para Redes Sociales (Open Graph) -->
+  <title>Entrenamiento de Póker Personalizado | METAPOKER - Planes Adaptativos</title>
+  <meta name="description" content="Entrenamiento personalizado de póker para micro-límites. 1.5h semanales + asistencia constante. Planes adaptativos para NL2, NL5, NL10, NL25, NL50, NL100+" />
+  <meta name="keywords" content="entrenamiento poker, coaching poker, micro limites, NL2, NL5, NL10, NL25, NL50, NL100, mejorar poker, estrategias poker, poker online" />
+  <meta name="author" content="METAPOKER" />
+  <meta property="og:title" content="Entrenamiento de Póker Personalizado | METAPOKER" />
+  <meta property="og:description" content="Desarrollo integral para jugadores de póker. Planes adaptativos para todos los niveles." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fuentes Externas y Hojas de Estilo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos CSS Integrados -->
+  <style>
+    /* METAPOKER - Hoja de Estilos Optimizada 2024 
+      Descripción: Se han consolidado y refactorizado los estilos para mejorar la legibilidad, 
+      el rendimiento y la mantenibilidad. Se eliminaron reglas duplicadas y se estandarizó
+      el uso de variables y animaciones.
+    */
+
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --text-primary: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent-blue: #58a6ff;
+      --accent-purple: #7c3aed;
+      --accent-pink: #ec4899;
+      --accent-gold: #fbbf24;
+      --border-color: #30363d;
+      --glow-blue: rgba(88, 166, 255, 0.5);
+      --glow-purple: rgba(124, 58, 237, 0.5);
+      --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color-scheme: dark;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Fondo animado de Aurora */
+    .aurora-background {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .aurora-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      animation: moveAurora 30s infinite alternate ease-in-out;
+    }
+
+    .aurora-shape1 {
+      width: 70vmax;
+      height: 70vmax;
+      background: radial-gradient(circle, var(--glow-blue) 0%, transparent 70%);
+      top: -20vmax;
+      left: -20vmax;
+    }
+
+    .aurora-shape2 {
+      width: 60vmax;
+      height: 60vmax;
+      background: radial-gradient(circle, var(--glow-purple) 0%, transparent 70%);
+      bottom: -15vmax;
+      right: -15vmax;
+    }
+
+    /* Estructura y Contenedores */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      padding: 6rem 0;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glass {
+      background: rgba(22, 27, 34, 0.6);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-radius: 2.5rem;
+      margin: 4rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .glass-card {
+      background: rgba(13, 17, 23, 0.7);
+      border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: var(--transition-fast);
+      will-change: transform;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--accent-blue);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Títulos y Descripciones */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(135deg, #a5cffc 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-description {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      line-height: 1.7;
+    }
+
+    /* Botones */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 20px 50px rgba(88, 166, 255, 0.5);
+      font-size: 1.1rem;
+      transition: var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+      pointer-events: none;
+    }
+
+    .btn-primary:hover::before {
+      width: 500px;
+      height: 500px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(88, 166, 255, 0.7);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--accent-blue);
+      color: var(--accent-blue);
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .btn-secondary:hover {
+      background: var(--accent-blue);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-large {
+      padding: 1.5rem 3rem;
+      font-size: 1.3rem;
+    }
+
+    /* Sección Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .logo-float {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      animation: float-synchronized 6s ease-in-out infinite;
+    }
+
+    .trebol-logo {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #10b981, #34d399);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 60px rgba(16, 185, 129, 0.7);
+      animation: pulse-trebol 2s infinite;
+    }
+    .trebol-icon {
+      font-size: 4rem;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+    }
+    .trebol-icon .fa-gear {
+      margin-left: -0.3em;
+      color: var(--text-secondary);
+      animation: spin 4s linear infinite;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(5rem, 8vw, 7rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.01em;
+      text-shadow: 0 0 40px var(--glow-blue);
+      animation: glow-pulse 3s infinite;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 0 auto 3rem;
+      max-width: 800px;
+    }
+
+    /* Tarjetas de Valor */
+    .value-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+    .value-card {
+      text-align: center;
+      padding: 3rem;
+    }
+    .value-icon i {
+      font-size:3.5rem;
+      filter:drop-shadow(0 0 8px currentColor);
+    }
+    .value-card h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .value-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    /* Observación Profesional */
+    .critique-section {
+      background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(124, 58, 237, 0.05));
+    }
+    .critique-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem;
+    }
+    .critique-text {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .critique-text strong {
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    /* Sistema / Pasos de Servicio */
+    .service-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .service-step {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      align-items: center;
+      gap: 3rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .section.is-visible .service-step {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .service-step:nth-child(2) { transition-delay: 0.2s; }
+    .service-step:nth-child(3) { transition-delay: 0.4s; }
+    .step-visual {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+    .step-icon {
+      font-size: 5rem;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
+      z-index: 2;
+    }
+    .step-number {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 0 30px var(--glow-blue);
+      z-index: 3;
+    }
+    .step-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .step-content p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Sección de Planes (Pricing) */
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+      align-items: center;
+    }
+    .pricing-card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: var(--transition-fast);
+      overflow: hidden;
+    }
+    .pricing-card.featured {
+      transform: scale(1.05);
+      border: 2px solid var(--accent-blue);
+    }
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 16px;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 3px solid;
+      white-space: nowrap;
+      z-index: 10;
+      box-shadow: 0 -2px 0 0 currentColor, 0 0 0 1px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .plan-badge[for="micro"] {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.98), rgba(219, 39, 119, 0.98));
+      color: #ffffff;
+      border-color: var(--accent-pink);
+      border-top-color: #ff6bb3;
+      text-shadow: 0 0 15px rgba(236, 72, 153, 0.9);
+    }
+    .plan-badge[for="recommended"] {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.98), rgba(29, 78, 216, 0.98));
+      color: #ffffff;
+      border-color: var(--accent-blue);
+      border-top-color: #60a5fa;
+      text-shadow: 0 0 15px rgba(59, 130, 246, 0.9);
+    }
+    .plan-badge[for="elite"] {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.99), rgba(17, 24, 39, 0.99));
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+      border-top-color: #fcd34d;
+      text-shadow: 0 0 15px rgba(251, 191, 36, 0.95);
+    }
+    .pricing-header {
+      margin-bottom: 2rem;
+      padding-top: 3rem;
+    }
+    .pricing-header h3 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .plan-focus {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--accent-blue);
+    }
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      text-align: left;
+    }
+    .pricing-features li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .pricing-features li .fa-check {
+      color: #22c55e;
+      font-size: 1rem;
+    }
+    .plan-condition {
+      background: rgba(88, 166, 255, .1);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+      border: 1px solid rgba(88, 166, 255, .2);
+    }
+    .plan-condition p {
+      margin: 0.5rem 0;
+      font-size: .875rem;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: rgba(88, 166, 255, .1);
+      border-radius: 1rem;
+      border: 1px solid rgba(88, 166, 255, .2);
+    }
+
+    /* Testimonios y Carrusel */
+    .carousel-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+    .testimonial-card {
+      padding: 4rem;
+      text-align: center;
+    }
+    .testimonial-rating {
+      color: #fbbf24;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.3rem;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+    }
+    .testimonial-text {
+      font-size: 1.3rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+    .testimonial-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .testimonial-avatar {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 1.4rem;
+      box-shadow: 0 0 25px var(--glow-blue);
+    }
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(13, 17, 23, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      z-index: 10;
+    }
+    .carousel-button:hover {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      transform: translateY(-50%) scale(1.15);
+      box-shadow: 0 0 25px var(--glow-blue);
+    }
+    .carousel-button.prev { left: 1.5rem; }
+    .carousel-button.next { right: 1.5rem; }
+    .carousel-button svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 2; fill: none; }
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 3rem;
+    }
+    .indicator {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--border-color);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: var(--transition-fast);
+    }
+    .indicator.active {
+      background: var(--accent-blue);
+      transform: scale(1.3);
+      box-shadow: 0 0 15px var(--glow-blue);
+    }
+    
+    /* Facilitador */
+    .facilitator-content-full {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .facilitator-icon-top i {
+      font-size: 142px;
+      color: var(--accent-blue);
+      filter: drop-shadow(0 0 12px var(--glow-blue));
+    }
+    .facilitator-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+     .facilitador-role {
+      font-size: 1.2rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .facilitator-credentials {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      text-align: left;
+      display: inline-block;
+    }
+    .credential-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .credential-icon {
+      color: var(--accent-blue);
+      margin-top: 0.25rem;
+    }
+
+    /* Formulario de Contacto (CTA) */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(124, 58, 237, 0.1));
+    }
+    .contact-form {
+      background: rgba(13, 17, 23, 0.9);
+      border-radius: 2rem;
+      padding: 3.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      border: 1px solid var(--border-color);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label {
+      display: block;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      background: var(--bg-primary);
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 1.25rem;
+      border-radius: 1rem;
+      font-size: 1.1rem;
+      transition: var(--transition-fast);
+      font-family: inherit;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2), 0 0 20px var(--glow-blue);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    .form-help {
+      display: block;
+      color: var(--accent-blue);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    .cta-benefits {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .benefits-title {
+      font-size: 1.3rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+    .benefits-list li {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .benefits-note {
+      color: var(--accent-blue);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+
+    /* Pie de página (Footer) */
+    .footer {
+      background: rgba(13, 17, 23, 0.9);
+      border-top: 1px solid var(--border-color);
+      padding: 4rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+    .footer p { margin: 0.5rem 0; }
+    
+    /* Animaciones */
+    @keyframes moveAurora {
+      0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      100% { transform: translate(20vw, 10vh) scale(1.3) rotate(180deg); }
+    }
+    @keyframes float-synchronized {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.02); }
+    }
+    @keyframes pulse-trebol {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes glow-pulse {
+      0%, 100% { text-shadow: 0 0 40px var(--glow-blue); }
+      50% { text-shadow: 0 0 60px var(--glow-blue), 0 0 80px var(--glow-purple); }
+    }
+
+    /* Notificaciones dinámicas */
+    #notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .notification {
+      padding: 1.5rem 2.5rem;
+      border-radius: 1rem;
+      color: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      font-size: 1.1rem;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .notification.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .notification.success {
+      background: linear-gradient(135deg, #10b981, #34d399);
+    }
+    .notification.error {
+      background: linear-gradient(135deg, #f87171, #ef4444);
+    }
+
+    /* Media Queries para Responsividad */
+    @media (max-width: 992px) {
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .section { padding: 4rem 0; }
+      .brand-name { font-size: 4rem; }
+      .trebol-logo { width: 100px; height: 100px; }
+      .trebol-icon { font-size: 3rem; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .carousel-button { width: 50px; height: 50px; }
+      .testimonial-card { padding: 2.5rem; }
+      .service-step { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
+      .plan-badge { font-size: 0.8rem; padding: 0.5rem 1rem; border-width: 2px; top: -8px; }
+      .pricing-header h3 { font-size: 1.8rem; }
+      .plan-focus { font-size: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Contenedor para notificaciones dinámicas -->
+  <div id="notification-container"></div>
+
+  <!-- Fondo animado -->
+  <div class="aurora-background" aria-hidden="true">
+    <div class="aurora-shape aurora-shape1"></div>
+    <div class="aurora-shape aurora-shape2"></div>
+  </div>
+
+  <main>
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="logo-float">
+          <div class="trebol-logo">
+            <span class="trebol-icon" aria-hidden="true"><i class="fa-solid fa-clover"></i><i class="fa-solid fa-gear"></i></span>
+          </div>
+          <h1 class="brand-name">METAPOKER</h1>
+        </div>
+        <h2 class="hero-subtitle">Redefine tu Juego</h2>
+        <p class="hero-description">La herramienta que conecta lo que sabes con lo que haces.</p>
+        <a href="#agenda" class="btn-primary">Crear Mi Plan Personalizado</a>
+      </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR -->
+    <section class="section glass">
+      <div class="container">
+        <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+        <div class="value-cards">
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-heart" style="color:#e11d48;"></i></div>
+            <h3>El Porqué</h3>
+            <p>Un propósito más allá del dinero que te motive a ser un profesional.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-bullseye" style="color:#f59e0b;"></i></div>
+            <h3>El Qué</h3>
+            <p>La estrategia correcta, sustentada por tecnologías de vanguardia.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon"><i class="fas fa-bolt" style="color:#22d3ee;"></i></div>
+            <h3>El Cómo</h3>
+            <p>La ejecución consistente y la aplicación de esa estrategia en el juego real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBSERVACIÓN PROFESIONAL -->
+    <section class="section glass critique-section">
+      <div class="container">
+        <h2 class="section-title">Nuestra Observación Profesional</h2>
+        <div class="critique-content glass-card">
+          <p class="critique-text"><i class="fas fa-quote-left"></i> La comunidad de póker se centra excesivamente en el <strong>Qué</strong>: la acumulación de estrategias y conocimiento. Este desequilibrio crea jugadores con información abundante pero sin un <strong>Porqué</strong> suficientemente fortalecido y un <strong>Cómo</strong> prácticamente desolado sin apoyo real.</p>
+          <p class="critique-text"><i class="fas fa-search"></i> Esta brecha genera inconsistencia, frustración y estancamiento. Los jugadores buscan más información para resolver problemas que en realidad requieren desarrollo integral: técnica, mentalidad y gestión del proceso.</p>
+          <p class="critique-text"><i class="fas fa-lightbulb"></i> En METAPOKER buscamos el equilibrio. No solo te damos el Qué, te ayudamos a construir el Cómo y conectamos con tu Porqué, para que realmente puedas desarrollar una inercia positiva en tu camino de profesionalización.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRO SISTEMA -->
+    <section class="section glass">
+      <div class="container">
+        <h2 class="section-title">Nuestro Sistema: El Ritmo de la Consistencia</h2>
+        <p class="section-description">Transformamos la complejidad del póker en un sistema visual y dinámico, centrado en tu progreso sostenible.</p>
+        <div class="service-steps">
+          <div class="service-step">
+            <div class="step-visual">
+              <div class="step-icon"><i class="fas fa-search" style="font-size: 5rem; color: #58a6ff;"></i></div>
+              <div class="step-number">1</div>
+            </div>
+            <div class="step-content">
+              <h3>Identificamos tus habilidades</h3>
+              <p>El póker no es una sola habilidad, sino un conjunto de sub-habilidades. Nuestro enfoque es holístico y personalizado.</p>
+            </div>
+          </div>
+          <div class="service-step">
+            <div class="step-visual">
+              <div class="step-icon"><i class="fas fa-bolt" style="font-size: 5rem; color: #58a6ff;"></i></div>
+              <div class="step-number">2</div>
+            </div>
+            <div class="step-content">
+              <h3>Nos centramos en la ejecución</h3>
+              <p>Tu progreso se basa en la acción estratégica y consistente. Un solo paso, enfocado y repetible.</p>
+            </div>
+          </div>
+          <div class="service-step">
+            <div class="step-visual">
+              <div class="step-icon"><i class="fas fa-users" style="font-size: 5rem; color: #58a6ff;"></i></div>
+              <div class="step-number">3</div>
+            </div>
+            <div class="step-content">
+              <h3>Somos tu equipo</h3>
+              <p>Rompemos con la soledad de la práctica. Te ofrecemos el valor sinérgico de un equipo que te asiste y complementa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PLANES -->
+    <section id="planes" class="section glass pricing-section">
+      <div class="container">
+        <h2 class="section-title">Planes de Entrenamiento Adaptativos</h2>
+        <p class="section-description">Cada jugador es único. Nuestros planes se adaptan a tu nivel, modalidad y objetivos específicos.</p>
+
+        <div class="pricing-cards">
+          <!-- Plan MicroLímites -->
+          <div class="pricing-card glass-card">
+            <div class="plan-badge" for="micro">Ideal para comenzar</div>
+            <div class="pricing-header">
+              <h3>MicroLímites</h3>
+              <div class="plan-focus">NL2 • NL5 • NL10</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Sesión semanal personalizada (1.5h)</li>
+              <li><i class="fas fa-check"></i> Asistencia durante toda la semana</li>
+              <li><i class="fas fa-check"></i> Gestión de tareas y seguimiento</li>
+              <li><i class="fas fa-check"></i> Soporte técnico y mental</li>
+              <li><i class="fas fa-check"></i> Respuesta a consultas</li>
+              <li><i class="fas fa-check"></i> Todas las modalidades (Cash, MTT, Sit&Go)</li>
+            </ul>
+            <div class="plan-condition">
+              <p><i class="fas fa-calendar-alt"></i> <strong>Membresía mensual</strong></p>
+              <p><i class="fas fa-handshake"></i> Condiciones en la primera sesión</p>
+            </div>
+            <button class="btn-primary plan-button">Agendar Evaluación</button>
+          </div>
+
+          <!-- Plan Niveles Medios -->
+          <div class="pricing-card glass-card featured">
+            <div class="plan-badge" for="recommended">Recomendado</div>
+            <div class="pricing-header">
+              <h3>Niveles Intermedios</h3>
+              <div class="plan-focus">NL25 • NL50 • NL100</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Sesión semanal intensiva (1.5h)</li>
+              <li><i class="fas fa-check"></i> 4 días de asistencia activa</li>
+              <li><i class="fas fa-check"></i> Análisis detallado de manos</li>
+              <li><i class="fas fa-check"></i> Gestión integral del progreso</li>
+              <li><i class="fas fa-check"></i> Soporte prioritario</li>
+              <li><i class="fas fa-check"></i> Todas las modalidades</li>
+            </ul>
+            <div class="plan-condition">
+              <p><i class="fas fa-calendar-alt"></i> <strong>Membresía mensual</strong></p>
+              <p><i class="fas fa-handshake"></i> Condiciones en la primera sesión</p>
+            </div>
+            <button class="btn-primary plan-button">Agendar Evaluación</button>
+          </div>
+
+          <!-- Plan Personalizado -->
+          <div class="pricing-card glass-card">
+            <div class="plan-badge" for="elite">Elite</div>
+            <div class="pricing-header">
+              <h3>Desarrollo Especializado</h3>
+              <div class="plan-focus">NL100+ • Proyectos específicos</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Habilidades específicas a desarrollar</li>
+              <li><i class="fas fa-check"></i> Enfoque técnico o mental personalizado</li>
+              <li><i class="fas fa-check"></i> Técnicas de estudio adaptadas</li>
+              <li><i class="fas fa-check"></i> Duración flexible por proyecto</li>
+              <li><i class="fas fa-check"></i> Trabajo orientado a objetivos</li>
+              <li><i class="fas fa-check"></i> Todas las modalidades</li>
+            </ul>
+            <div class="plan-condition">
+              <p><i class="fas fa-calendar-alt"></i> <strong>Por proyecto o mensual</strong></p>
+              <p><i class="fas fa-handshake"></i> Evaluación personalizada</p>
+            </div>
+            <button class="btn-secondary plan-button">Solicitar Información</button>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <p><i class="fas fa-info-circle"></i> <strong>Importante:</strong> Los valores se ajustan según tu situación específica. Lo conversamos en tu sesión de evaluación gratuita.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section glass testimonials">
+      <div class="container">
+        <h2 class="section-title">Lo Que Nuestros Clientes Dicen</h2>
+        <div class="carousel-container">
+          <div class="carousel-inner" id="testimonials-carousel">
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"En febrero, jugaba NL2 y ahora estoy a solo unos pasos de subir a NL25... Sin duda, los recomiendo con los ojos cerrados a cualquier persona que quiera dedicarse profesionalmente al póker."</p><footer class="testimonial-footer"><div class="testimonial-avatar">FZ</div><div><div class="testimonial-name">Fabián Zugaide</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"El como persona, es super paciente, positivo, educado, capaz y es muy bueno leyendo a la persona... doy mi palabra, de que es alguien super comprometido y exageradamente competente en muchas áreas."</p><footer class="testimonial-footer"><div class="testimonial-avatar">AE</div><div><div class="testimonial-name">Alex Etxaburu</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"El cambio que he experimentado... ha sido sobretodo la realización de resúmenes inteligentes que te van a facilitar la toma de decisiones. Antes pasaba horas viendo vídeos como si fuera 'Netflix', lo cual era ineficaz."</p><footer class="testimonial-footer"><div class="testimonial-avatar">JR</div><div><div class="testimonial-name">Juan A. Ruiz</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"La experiencia con Meta Poker ha sido bastante enriquecedora... transmiten el entendimiento del póker de una manera integral..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">Y</div><div><div class="testimonial-name">Yeison</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"Excelente método de enseñanza que no se encuentra en ningún lado de habla hispana, todo está estructurado en función de las necesidades y tiempo del jugador hay un seguimiento constante..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">LH</div><div><div class="testimonial-name">Leonardo Hernandez</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"...la atención no hay duda que es reconocible el interés de ayudar sin importar la hora y el día, te va a llevar de la mano y tendrás una persona con un valor humanitario demasiado grande..."</p><footer class="testimonial-footer"><div class="testimonial-avatar">JV</div><div><div class="testimonial-name">José Valerio</div></div></footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="testimonial-card glass-card"><div class="testimonial-rating">★★★★★</div><p class="testimonial-text">"Muy buen método y se preocupa como hacerte el camino más fácil y explican porque se hacen, 100% recomendable. Atención personalizada prácticamente diariamente."</p><footer class="testimonial-footer"><div class="testimonial-avatar">V</div><div><div class="testimonial-name">Vanfull007</div></div></footer></blockquote></div>
+          </div>
+          <button class="carousel-button prev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg></button>
+          <button class="carousel-button next" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="carousel-indicators"></div>
+      </div>
+    </section>
+
+    <!-- FACILITADOR -->
+    <section class="section glass facilitator-section">
+      <div class="container">
+        <h2 class="section-title">Conoce a nuestro Facilitador</h2>
+        <div class="facilitator-content-full">
+          <div class="facilitator-icon-top"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3 class="facilitator-name">Miguel Sáenz</h3>
+          <div class="facilitador-role">Facilitador de METAPOKER</div>
+          <p>En METAPOKER, somos un sistema que está encarnado por una visión y experiencia. Miguel Sáenz es el facilitador que te guiará en este proceso.</p>
+          <ul class="facilitator-credentials">
+            <li class="credential-item"><span class="credential-icon">◆</span><span>Más de <strong>5 años de experiencia</strong> en el póker profesional.</span></li>
+            <li class="credential-item"><span class="credential-icon">◆</span><span>Experiencia previa como <strong>atleta profesional en ajedrez</strong>.</span></li>
+            <li class="credential-item"><span class="credential-icon">◆</span><span>Formación en <strong>Administración de Empresas</strong> y estudios realizados en Desarrollo Humano, Neurociencia, y Psicología del Aprendizaje.</span></li>
+            <li class="credential-item"><span class="credential-icon">◆</span><span>Cofundador de un sistema que integra <strong>neurociencia y psicología del aprendizaje</strong> para el desarrollo de la maestría.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL Y FORMULARIO -->
+    <section id="agenda" class="section cta-section">
+      <div class="container">
+        <h2 class="section-title">¿Quieres desarrollar tu juego de forma integral?</h2>
+        <p class="section-description">Reserva tu sesión estratégica gratuita y descubre cómo podemos ayudarte a crear un plan personalizado que se ajuste a tus necesidades.</p>
+        <form id="schedule-form" class="contact-form glass-card" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="name">Tu Nombre *</label><input type="text" id="name" name="name" autocomplete="name" required placeholder="Ej: Juan Pérez"></div>
+            <div class="form-group"><label for="country">País *</label><input type="text" id="country" name="country" autocomplete="country" required placeholder="Ej: México"></div>
+          </div>
+          <div class="form-group"><label for="datetime">Fecha y Hora Preferida *</label><input type="datetime-local" id="datetime" name="datetime" required></div>
+          <div class="form-group"><label for="purpose">Cuéntanos brevemente sobre tu situación actual *</label><textarea id="purpose" name="purpose" rows="4" maxlength="500" minlength="10" placeholder="Ej: Me gustaría mejorar mi consistencia y tomar mejores decisiones..." required></textarea><small id="purpose-help" class="form-help">💡 Esto nos ayudará a crear un plan que se ajuste a tus necesidades</small></div>
+          <button type="submit" class="btn-primary btn-large">Crear Mi Plan Personalizado</button>
+        </form>
+        <div class="cta-benefits">
+          <p class="benefits-title">En tu sesión descubrirás:</p>
+          <ul class="benefits-list">
+            <li>✅ Cómo crear un plan de desarrollo personalizado</li>
+            <li>✅ Las áreas clave que necesitas fortalecer</li>
+            <li>✅ La metodología que utilizamos para acompañarte</li>
+          </ul>
+          <p class="benefits-note">🗓️ Espacios limitados cada semana</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 METAPOKER. Todos los derechos reservados.</p>
+      <p>Juego responsable | +18 años</p>
+    </div>
+  </footer>
+
+  <!-- Scripts Integrados -->
+  <script>
+    // METAPOKER - JavaScript Optimizado 2020
+    document.addEventListener('DOMContentLoaded', () => {
+
+      console.log('💎 METAPOKER Landing Page Premium - Cargada');
+
+      /**
+       * Módulo de Notificaciones
+       * Reemplaza los 'alert' por notificaciones no bloqueantes.
+       */
+      const notificationModule = (() => {
+        const container = document.getElementById('notification-container');
+        
+        function show(message, type = 'success', duration = 5000) {
+          const notif = document.createElement('div');
+          notif.className = `notification ${type}`;
+          notif.textContent = message;
+          container.appendChild(notif);
+          
+          // Trigger animation
+          setTimeout(() => notif.classList.add('show'), 10);
+
+          // Hide and remove
+          setTimeout(() => {
+            notif.classList.remove('show');
+            notif.addEventListener('transitionend', () => notif.remove());
+          }, duration);
+        }
+        return { show };
+      })();
+
+
+      /**
+       * Módulo de Formulario
+       * Gestiona la validación y el envío del formulario de contacto.
+       */
+      const formModule = (() => {
+        const form = document.getElementById('schedule-form');
+        if (!form) return;
+
+        // Establece la fecha mínima para el input datetime-local
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        document.getElementById('datetime').min = now.toISOString().slice(0, 16);
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          if (!validate(data)) return;
+          
+          sendToWhatsApp(data);
+          notificationModule.show('¡Solicitud enviada! Serás redirigido a WhatsApp.', 'success');
+          form.reset();
+        });
+        
+        function validate(data) {
+          const validations = [
+            { check: data.name.length < 2, message: 'Por favor, ingresa tu nombre completo.' },
+            { check: data.country.length < 2, message: 'Por favor, ingresa tu país.' },
+            { check: !data.datetime, message: 'Por favor, selecciona una fecha y hora.' },
+            { check: new Date(data.datetime) <= new Date(), message: 'Por favor, selecciona una fecha y hora futura.' },
+            { check: data.purpose.length < 10, message: 'Cuéntanos más sobre tu situación (mín. 10 caracteres).' }
+          ];
+
+          for (const rule of validations) {
+            if (rule.check) {
+              notificationModule.show(rule.message, 'error');
+              return false;
+            }
+          }
+          return true;
+        }
+
+        function sendToWhatsApp(data) {
+          // Sanitiza los datos para evitar problemas de formato
+          const sanitizedData = Object.fromEntries(
+            Object.entries(data).map(([key, value]) => [key, value.toString().trim().replace(/[<>]/g, '')])
+          );
+
+          const userDateTime = new Date(sanitizedData.datetime);
+          const formattedTime = userDateTime.toLocaleString('es-ES', { dateStyle: 'full', timeStyle: 'short' });
+
+          const message = `
+*Nueva Solicitud de Sesión Estratégica - METAPOKER*
+
+*Nombre:* ${sanitizedData.name}
+*País:* ${sanitizedData.country}
+*Fecha propuesta:* ${formattedTime}
+
+*Situación actual:*
+${sanitizedData.purpose}
+
+_Este mensaje fue generado desde la web de METAPOKER._
+          `.trim();
+
+          const whatsappUrl = `https://wa.me/584269204485?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        }
+      })();
+
+
+      /**
+       * Módulo de Carrusel de Testimonios
+       * Controla la lógica del carrusel, incluyendo navegación y autoplay.
+       */
+      const carouselModule = (() => {
+        const carousel = document.getElementById('testimonials-carousel');
+        if (!carousel) return;
+        
+        const items = carousel.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+        let currentSlide = 0;
+        let isPaused = false;
+        let intervalId;
+
+        function updateCarousel() {
+          carousel.style.transform = `translateX(${-currentSlide * 100}%)`;
+          document.querySelectorAll('.indicator').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+          });
+        }
+        
+        function move(direction) {
+          currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+          updateCarousel();
+          resetInterval();
+        }
+
+        function goTo(index) {
+          currentSlide = index;
+          updateCarousel();
+          resetInterval();
+        }
+        
+        function resetInterval() {
+          clearInterval(intervalId);
+          intervalId = setInterval(() => {
+            if (!isPaused) move(1);
+          }, 6000);
+        }
+
+        // Crear indicadores dinámicamente
+        for (let i = 0; i < totalSlides; i++) {
+          const button = document.createElement('button');
+          button.classList.add('indicator');
+          button.setAttribute('aria-label', `Ir al testimonio ${i + 1}`);
+          if (i === 0) button.classList.add('active');
+          button.addEventListener('click', () => goTo(i));
+          indicatorsContainer.appendChild(button);
+        }
+        
+        // Event listeners
+        document.querySelector('.carousel-button.next').addEventListener('click', () => move(1));
+        document.querySelector('.carousel-button.prev').addEventListener('click', () => move(-1));
+        
+        const container = document.querySelector('.carousel-container');
+        container.addEventListener('mouseenter', () => isPaused = true);
+        container.addEventListener('mouseleave', () => isPaused = false);
+        
+        // Swipe en móviles
+        let touchStartX = 0;
+        carousel.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        carousel.addEventListener('touchend', e => {
+          const touchEndX = e.changedTouches[0].screenX;
+          if (touchEndX < touchStartX - 50) move(1);
+          if (touchEndX > touchStartX + 50) move(-1);
+        }, { passive: true });
+
+        resetInterval();
+      })();
+
+
+      /**
+       * Módulo de Desplazamiento Suave
+       * Añade smooth scroll a los botones que llevan a otras secciones.
+       */
+      const smoothScrollModule = (() => {
+        document.querySelectorAll('a[href^="#"], .plan-button').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.matches('a') ? this.getAttribute('href') : '#agenda';
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      })();
+
+      
+      /**
+       * Módulo de Animaciones al Desplazar
+       * Anima las secciones cuando entran en el viewport.
+       */
+      const scrollAnimationModule = (() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px'
+        });
+
+        document.querySelectorAll('.section').forEach(el => observer.observe(el));
+      })();
+
+    });
+  </script>
+</body>
+
+</html>
+
